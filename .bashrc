@@ -1,9 +1,10 @@
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
 
-for FILE in ~/.{bash_aliases,bash_scripts}; do
+for FILE in ~/.{bash_aliases,bash_scripts,bash_prompt}; do
     [ -f "$FILE" ] && [ -f "$FILE" ] && source "$FILE";
 done;
+unset FILE
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -12,9 +13,15 @@ HISTCONTROL=ignoreboth
 # append to the history file, don't overwrite it
 shopt -s histappend
 
-# for getting history length see HISTSIZE and HISTFILESIZE in bash(1)
-HISTSIZE=2000
-HISTFILESIZE=5000
+# setting unlimited history
+HISTSIZE=
+HISTFILESIZE=
+
+# display date and time alongside commands in format yyyy-MM-dd hh:mm:ss
+HISTTIMEFORMAT="[%F %T] "
+
+# change the file location to avoid truncation
+HISTFILE=~/.bash_unlimited_history
 
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
