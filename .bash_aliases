@@ -31,7 +31,7 @@ alias lfa='ls -lA --color=always | grep ^[-l] --color=never'
 # list only directories
 alias ld='ls -l --color=always | grep ^d --color=never'
 alias lda='ls -lA --color=always | grep ^d --color=never'
-# maybe it would be good to change this to scripts 
+# maybe it would be better to change this to scripts 
 # and check if a file is a symbolic link to a directory or file
 
 
