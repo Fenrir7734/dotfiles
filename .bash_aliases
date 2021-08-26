@@ -25,10 +25,15 @@ alias la='ls -A'
 alias lr='ls -lR'
 
 # list only files
-alias lf='ls -l | grep ^-'
+alias lf='ls -l --color=always  | grep ^[-l] --color=never'
+alias lfa='ls -lA --color=always | grep ^[-l] --color=never'
 
 # list only directories
-alias ld='ls -l | grep ^d'
+alias ld='ls -l --color=always | grep ^d --color=never'
+alias lda='ls -lA --color=always | grep ^d --color=never'
+# maybe it would be good to change this to scripts 
+# and check if a file is a symbolic link to a directory or file
+
 
 # navigation aliases
 alias cd..='cd ..'
