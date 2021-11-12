@@ -21,9 +21,29 @@ extract () {
   fi
 }
 
-mkdirg ()
+mkdcd ()
 {
         mkdir -p $1
-        cd $1
+	cd $1
+}
+
+mvcd () 
+{
+	if [ -d $1 ]; then
+		mv $1 $2
+		cd $2
+	else
+		echo "Given file is not a directory..."
+	fi;
+}
+
+cpcd() 
+{
+	if [ -d $1  ]; then
+		cp -r $1 $2
+		cd $2
+	else
+		echo "Given file is not a directory..."
+	fi;
 }
 

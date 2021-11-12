@@ -71,4 +71,12 @@ alias disk='df | sed -n "1p;/^\/dev\/sd/p;"'
 alias dl='cd ~/Downloads && ls'
 alias doc='cd ~/Documents && ls'
 
+# Telling bash to check if the next word after sudo is an alias.
+# It is necessary beacause bash check only first word of a command for an alias.
+# By inserting space (or tab) at the end of the alias next command word 
+# following alias will be also check for alias expansion.
+# http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Aliases
+alias sudo='sudo '
+
 alias python='python3'
+alias lampp='/opt/lampp/lampp'
