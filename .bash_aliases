@@ -78,5 +78,8 @@ alias doc='cd ~/Documents && ls'
 # http://www.gnu.org/savannah-checkouts/gnu/bash/manual/bash.html#Aliases
 alias sudo='sudo '
 
+# shutdown
+alias bye='sudo shutdown -h now'
+
 alias python='python3'
 alias lampp='/opt/lampp/lampp'
